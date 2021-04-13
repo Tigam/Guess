@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8">
+    <title>Gewonnen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <script src="js/popper.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Gewonnen</h1>
+      <div>
+        <img th:src="${imageURL}" alt="Gewonnen!!!" class="img-thumbnail">
+      </div>
+      <p>Sie haben in <span th:text="${anzahlVersuche}"></span> Versuch<span th:if="${anzahlVersuche != 1}">en</span> gewonnen!</p>
+      <a class="btn btn-secondary" href="/welcome">Zurück zum Start...</a>
+  </body>
+</html>
